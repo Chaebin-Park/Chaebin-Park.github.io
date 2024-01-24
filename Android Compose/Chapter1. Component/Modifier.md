@@ -31,7 +31,7 @@ fun ModifierEx() {
 }
 ```
 
-Modifier height
+Modifier height
 ```kotlin
 @Composable
 fun ModifierEx() {
@@ -49,7 +49,7 @@ fun ModifierEx() {
 }
 ```
 
-Modifier height with width
+Modifierheight with width
 ```kotlin
 @Composable
 fun ModifierEx() {
@@ -69,7 +69,7 @@ fun ModifierEx() {
 }
 ```
 
-Modifier size
+Modifier size
 ```kotlin
 @Composable
 fun ModifierEx() {
@@ -107,7 +107,7 @@ fun ModifierEx() {
 }
 ```
 
-Modifier padding
+Modifier padding
 ```kotlin
 @Composable
 fun ModifierEx() {
@@ -129,7 +129,7 @@ fun ModifierEx() {
 }
 ```
 
-Modifier padding
+Modifier padding
 ```kotlin
 @Composable
 fun ModifierEx() {
