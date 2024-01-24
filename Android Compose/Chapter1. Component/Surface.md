@@ -1,0 +1,75 @@
+Surface
+가장 기본적으로 UI를 구축하는 기반.
+젯팩은 margin 고려하지 않음.
+Text에 마진을 가져야 한다면, Text를 포함하는 Surface에 패딩을 설정
+
+Default
+```kotlin
+@Composable
+fun SurfaceEx(name: String) {
+  Surface(
+    modifier = Modifier.padding(5.dp)
+  ) {
+    Text(text = "Hello $name!", modifier = Modifier.padding(8.dp))
+  }
+}
+```
+
+Elevation 설정
+```kotlin
+@Composable
+fun SurfaceEx(name: String) {
+  Surface(
+    modifier = Modifier.padding(5.dp),
+    shadowElevation = 10.dp  // 그림자 생김
+  ) {
+    Text(text = "Hello $name!", modifier = Modifier.padding(8.dp))
+  }
+}
+```
+
+Border 설정
+```kotlin
+@Composable
+fun SurfaceEx(name: String) {
+  Surface(
+    modifier = Modifier.padding(5.dp),
+    shadowElevation = 10.dp,
+    border = BorderStroke(width = 2.dp, color = Color.Magenta)
+  ) {
+    Text(text = "Hello $name!", modifier = Modifier.padding(8.dp))
+  }
+}
+```
+
+Shape 설정
+```kotlin
+@Composable
+fun SurfaceEx(name: String) {
+  Surface(
+    modifier = Modifier.padding(5.dp),
+    shadowElevation = 10.dp,
+    border = BorderStroke(width = 2.dp, color = Color.Magenta),
+    shape = CircleShape
+  ) {
+    Text(text = "Hello $name!", modifier = Modifier.padding(8.dp))
+  }
+}
+```
+
+Color 설정
+```kotlin
+@Composable
+fun SurfaceEx(name: String) {
+  Surface(
+    modifier = Modifier.padding(5.dp),
+    shadowElevation = 10.dp,
+    border = BorderStroke(width = 2.dp, color = Color.Magenta),
+    shape = CircleShape,
+    color = MaterialTheme.colorScheme.surface // error, primary 등.
+  ) {
+    Text(text = "Hello $name!", modifier = Modifier.padding(8.dp))
+  }
+}
+```
+> Content color를 따로 설정하지 않으면 배경 color에 맞춰 적당한 색으로 바꿔줌.
