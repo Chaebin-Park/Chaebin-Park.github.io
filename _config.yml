@@ -1,3 +1,7 @@
 theme: jekyll-theme-minimal
 title: Chaebin's study
 description: Android & Flutter
+
+layout: page
+title: "Android Compose"
+permalink: /Android Compose/AndroidStudy.md
