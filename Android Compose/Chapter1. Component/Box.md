@@ -1,0 +1,49 @@
+Box
+- box 자체를 사용하려는 용도
+- frame layout같이 중첩하기 위한 용도
+
+Default
+```koltin
+@Composable
+fun BoxEx() {
+  Box(modifier = Modifier.size(100.dp)) {
+    Text(text = "Hello World!", modifier = Modifier.align(Alignment.Center)) // BottomCenter, End 등
+  }
+}
+```
+
+Text 두 개 배치
+```koltin
+@Composable
+fun BoxEx() {
+  Box(modifier = Modifier.size(100.dp)) {
+    Text(text = "Hello World", modifier = Modifier.align(Alignment.BottomEnd))
+    Text(text = "Jetpack Compose", modifier = Modifier.align(Alignment.CenterEnd))
+  }
+}
+```
+<img width="151" alt="스크린샷 2024-01-24 오후 10 30 54" src="https://github.com/Chaebin-Park/Chaebin-Park.github.io/assets/64880435/1ee972a2-9b9c-4280-a1e9-442e35bc65ff">
+
+두 개의 박스를 박스 안에 배치
+```koltin
+@Composable
+fun BoxEx() {
+  Box(modifier = Modifier.size(100.dp)) {
+    Box(modifier = Modifier.size(70.dp).background(Color.Cyan).align(Alignment.CenterStart))
+    Box(modifier = Modifier.size(70.dp).background(Color.Yellow).align(Alignment.BottomEnd))
+  }
+}
+```
+<img width="149" alt="스크린샷 2024-01-24 오후 10 33 46" src="https://github.com/Chaebin-Park/Chaebin-Park.github.io/assets/64880435/5e38d337-1080-4dcc-9e7f-328831249076">
+
+부모 박스의 modifier 설정 제거
+```koltin
+@Composable
+fun BoxEx() {
+  Box {
+    Box(modifier = Modifier.fillMaxSize().background(Color.Cyan).align(Alignment.CenterStart)) // matchParent 설정을 하면, 두 번째 component의 크기에 맞춤.
+    Box(modifier = Modifier.size(70.dp).background(Color.Yellow).align(Alignment.BottomEnd))
+  }
+}
+```
+<img width="158" alt="스크린샷 2024-01-24 오후 10 37 40" src="https://github.com/Chaebin-Park/Chaebin-Park.github.io/assets/64880435/100c4e49-2d58-4c99-aa52-e1d92fd3510c">
