@@ -1,5 +1,5 @@
 # Chapter1. Component
-- [01.Text](./Chapter1._Component/01.Text.md)
+- [01.Text](./Ch1.Component/01.Text.md)
 - [02.Button](Android%02Compose/Chapter1.%02Component/02.Button.md)
 - [03.Modifier](Android%02Compose/Chapter1.%02Component/03.Modifier.md)
 - [04.Surface](Android%02Compose/Chapter1.%02Component/04.Surface.md)
