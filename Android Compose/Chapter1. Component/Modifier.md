@@ -135,8 +135,8 @@ Modifier padding
 fun ModifierEx() {
   Button(
     colors = ButtonDefaults.buttonColors(
-      Color.Magenta,  // Button 자체 색상
-      contentColor = Color.Cyan  // Button 내부 content 색상
+      Color.Magenta,
+      contentColor = Color.Cyan
     ),
     onClick = {},
     modifier = Modifier.padding(100.dp)
@@ -150,3 +150,56 @@ fun ModifierEx() {
   }
 }
 ```
+
+Click 범위 설정
+```kotlin
+@Composable
+fun ModifierEx() {
+  Button(
+    colors = ButtonDefaults.buttonColors(
+      Color.Magenta,
+      contentColor = Color.Cyan
+    ),
+    onClick = {},
+    modifier = Modifier.padding(100.dp),
+    enabled = false // click 불가
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Search,
+      contentDescription = "something search"
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+    Text(
+      text = "Search",
+      modifier = Modifier.clickable {}
+    )
+  }
+}
+```
+
+Offset
+```kotlin
+@Composable
+fun ModifierEx() {
+  Button(
+    colors = ButtonDefaults.buttonColors(
+      Color.Magenta,
+      contentColor = Color.Cyan
+    ),
+    onClick = {},
+    modifier = Modifier.padding(100.dp),  
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Search,
+      contentDescription = "something search"
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+    Text(
+      text = "Search",
+      modifier = Modifier.offset(x = 10.dp) // offset 설정
+    )
+  }
+}
+```
+> spacer와 text 사이에 offset이 설정된 모습
+<img width="203" alt="스크린샷 2024-01-24 오후 10 15 44" src="https://github.com/Chaebin-Park/Chaebin-Park.github.io/assets/64880435/385a9025-5fb2-4bc8-a41d-e140d3e4e8c9">
