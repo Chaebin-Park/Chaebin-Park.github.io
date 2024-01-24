@@ -60,3 +60,87 @@ fun ButtonExample(onButtonClicked: () -> Unit) {
   }
 }
 ```
+
+Enabled 속성
+```kotlin
+@Composable
+fun ButtonExample(onButtonClicked: () -> Unit) {
+  Button(
+    onClick = onButtonClicked,
+    enabled = false
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Send,    // 이미지
+      contentDescription = "something send"  // 벡터 이미지 설명
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+//    Spacer(modifier = Modifier.size(30.dp))
+    Text(text = "Send")
+  }
+}
+```
+
+Border stroke
+```kotlin
+@Composable
+fun ButtonExample(onButtonClicked: () -> Unit) {
+  Button(
+    onClick = onButtonClicked,
+    enabled = true,
+    border = BorderStroke(10.dp, Color.Magenta)
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Send,    // 이미지
+      contentDescription = "something send"  // 벡터 이미지 설명
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+//    Spacer(modifier = Modifier.size(30.dp))
+    Text(text = "Send")
+  }
+}
+```
+
+CircleShape
+```kotlin
+@Composable
+fun ButtonExample(onButtonClicked: () -> Unit) {
+  Button(
+    onClick = onButtonClicked,
+    enabled = true,
+    border = BorderStroke(10.dp, Color.Magenta),
+    // shape = RoundedCornerShape(10.dp)
+    shape = CircleShape
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Send,    // 이미지
+      contentDescription = "something send"  // 벡터 이미지 설명
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+//    Spacer(modifier = Modifier.size(30.dp))
+    Text(text = "Send")
+  }
+}
+```
+
+Content Padding
+```kotlin
+@Composable
+fun ButtonExample(onButtonClicked: () -> Unit) {
+  Button(
+    onClick = onButtonClicked,
+    enabled = true,
+    border = BorderStroke(10.dp, Color.Magenta),
+    // shape = RoundedCornerShape(10.dp)
+    shape = CircleShape,
+    contentPadding = PaddingValues(20.dp)
+  ) {
+    Icon(
+      imageVector = Icons.Filled.Send,    // 이미지
+      contentDescription = "something send"  // 벡터 이미지 설명
+    )
+    Spacer(modifier = Modifier.size(ButtonDefaults.IconSpacing))
+//    Spacer(modifier = Modifier.size(30.dp))
+    Text(text = "Send")
+  }
+}
+```
