@@ -1,5 +1,5 @@
 
-![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Android%20Study&fontSize=90&fontColor=606060&desc=Chaein%20Park&descAlignY=70&descAlign=80)
+![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Android%20Developer&fontSize=90&fontColor=606060&desc=Chaein%20Park&descAlignY=70&descAlign=80)
 
 # Language
 ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
