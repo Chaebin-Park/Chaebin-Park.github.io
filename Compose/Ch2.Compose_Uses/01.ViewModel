@@ -1,0 +1,4 @@
+# 사전준비
+```gradle
+implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+```
